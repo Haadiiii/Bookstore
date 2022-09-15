@@ -8,8 +8,8 @@ const Booklist = () => (
   <div className="book">
     <button type="button">Remove</button>
     <div>
-      <Book name="title" />
-      <Book name="author" />
+      <Book title="title" />
+      <Book title="author" />
     </div>
     <div>
       <Form />
