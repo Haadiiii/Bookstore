@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  background-color: aliceblue;
+  height: 10rem;
+  align-items: center;
+  box-shadow: 5px 5px 5px 5px rgb(96, 92, 92);
+  position: sticky;
+}
+
+.navbar h1 {
+  background-color: aliceblue;
+}
+
+.list {
+  display: flex;
+  gap: 4rem;
+  background-color: aliceblue;
+}
+
+li {
+  list-style: none;
+  background-color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  background-color: aliceblue;
+}
