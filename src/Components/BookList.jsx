@@ -6,11 +6,7 @@ import "./booklist.css";
 
 const Booklist = () => (
   <div className="book">
-    <button type="button">Remove</button>
-    <div>
-      <Book title="title" />
-      <Book title="author" />
-    </div>
+    <Book title="title" author="author" button="Remove" />
     <div>
       <Form />
     </div>
