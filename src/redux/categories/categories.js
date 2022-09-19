@@ -1,5 +1,3 @@
-import Booklist from "../../Components/booklist";
-
 const BOOKLIST = "catagories/catagories/BOOKLIST";
 
 const categories = [];
@@ -13,7 +11,7 @@ export const checkBook = () => (dispatch) => {
 
 const categoryReducer = (state = categories, action) => {
   switch (action.type) {
-    case Booklist:
+    case BOOKLIST:
       return {
         ...state,
         state: action.payload,
