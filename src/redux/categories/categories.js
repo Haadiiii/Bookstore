@@ -1,11 +1,13 @@
 const BOOKLIST = "catagories/catagories/BOOKLIST";
 
-const categories = [];
+const categories = {
+  message: "",
+};
 
 export const checkBook = () => (dispatch) => {
   dispatch({
     type: BOOKLIST,
-    payload: ["Under construction"],
+    payload: "Under construction",
   });
 };
 
@@ -14,7 +16,7 @@ const categoryReducer = (state = categories, action) => {
     case BOOKLIST:
       return {
         ...state,
-        state: action.payload,
+        message: [...state.message, action.payload],
       };
 
     default:
