@@ -1,11 +1,13 @@
 const BOOKLIST = "catagories/catagories/BOOKLIST";
 
-const categories = [];
+const categories = {
+  message: "Under construction",
+};
 
 export const checkBook = () => (dispatch) => {
   dispatch({
     type: BOOKLIST,
-    payload: ["Under construction"],
+    payload: "Under construction",
   });
 };
 

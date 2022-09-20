@@ -6,7 +6,7 @@ import "./booklist.css";
 
 const Booklist = () => (
   <div className="book">
-    <Book title="title" author="author" button="Remove" />
+    <Book />
     <div>
       <Form />
     </div>

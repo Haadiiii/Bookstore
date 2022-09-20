@@ -1,6 +1,11 @@
 const ADD = "books/books/ADD";
 const REMOVE = "books/books/REMOVE";
-const bookArray = [];
+import uuid4 from "react-uuid";
+const bookArray = {
+  name: "haadii",
+  author: "Hamid Ali",
+  id: uuid4(),
+};
 
 export const addBook = (book) => (dispatch) => {
   dispatch({
@@ -21,7 +26,7 @@ const bookReducer = (state = bookArray, action) => {
     case ADD:
       return {
         ...state,
-        state: action.payload,
+        state: [...state, action.payload],
       };
     case REMOVE:
       return {
