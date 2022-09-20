@@ -5,9 +5,15 @@ import { checkBook } from "../redux/categories/categories";
 const Categories = () => {
   const dispatch = useDispatch();
   const { message } = useSelector((state) => state.category);
+
+  const checkStatusCategory = () => {
+    dispatch(checkBook());
+  };
   return (
     <div className="cati">
-      <button type="button" onClick={() => dispatch(checkBook())}>Check status</button>
+      <button type="button" onClick={checkStatusCategory}>
+        Check status
+      </button>
       <div>{message}</div>
     </div>
   );
