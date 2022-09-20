@@ -1,30 +1,29 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import uuid from "react-uuid";
 import { addBook } from "../redux/books/books";
 import "./booklist.css";
-import uuid4 from "react-uuid";
-import { useState } from "react";
 
 const Form = () => {
   const dispatch = useDispatch();
-  const [values, setValue] = useState({
+  const [values, setValues] = useState({
+    id: uuid(),
     title: "",
     author: "",
   });
 
   const changeHandler = (e) => {
-    const [name, value] = e.target;
-    setValue((preData) => {
-      return {
-        ...preData,
-        [name]: value,
-      };
-    });
+    const { name, value } = e.target;
+    setValues((preData) => ({
+      ...preData,
+      [name]: value,
+    }));
   };
 
   const clickHandler = (e) => {
     e.preventDefault();
-    dispatch(addBook(book));
+    setValues({ id: uuid(), title: "", author: "" });
+    dispatch(addBook(values));
   };
 
   return (
@@ -32,16 +31,20 @@ const Form = () => {
       <form type="submit" onSubmit={clickHandler}>
         <input
           type="title"
-          name={values.title}
+          value={values.title}
+          name="title"
           placeholder="title"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <input
           type="author"
-          name={values.author}
+          value={values.author}
+          name="author"
           placeholder="author"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <button type="submit">Add Book</button>
       </form>
     </div>
