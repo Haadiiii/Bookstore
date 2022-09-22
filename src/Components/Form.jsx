@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import uuid from "react-uuid";
-import { addBook, showBook } from "../redux/books/books";
+import { addBook } from "../redux/books/books";
 import "./booklist.css";
 
 const Form = () => {
@@ -24,9 +24,9 @@ const Form = () => {
     e.preventDefault();
     const book = {
       item_id: uuid(),
-      ...values
-    }
-    dispatch(addBook(book))
+      ...values,
+    };
+    dispatch(addBook(book));
     setValues({ title: "", author: "", category: "" });
   };
 
@@ -39,22 +39,25 @@ const Form = () => {
           name="title"
           placeholder="title"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <input
           type="author"
           value={values.author}
           name="author"
           placeholder="author"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <select type="category" name="category" placeholder="category" value={values.category} onChange={changeHandler} id="otherField">
           <option>Select Category</option>
           <option>sports</option>
           <option>Fantasy</option>
-          <option>Children's</option>
+          <option>Children&apos;s</option>
           <option>Literary Fiction</option>
           <option>Science Fiction</option>
-        </select>{" "}
+        </select>
+        {" "}
         <button type="submit">Add Book</button>
       </form>
     </div>

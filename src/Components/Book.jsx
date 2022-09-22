@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { removeBook, showBook } from "../redux/books/books";
-import axios from "axios";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { removeBook } from "../redux/books/books";
 
 const Book = (props) => {
   const dispatch = useDispatch();
@@ -10,15 +9,18 @@ const Book = (props) => {
   };
   return (
     <div>
-      
+
       <p>
-        author :{props.author}
+        author :
+        {props.author}
       </p>
       <h4>
-        title :{props.title}
+        title :
+        {props.title}
       </h4>
       <p>
-        category :{props.category}
+        category :
+        {props.category}
       </p>
       <button type="button" onClick={removeBookFromStor}>
         Remove
