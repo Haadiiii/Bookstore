@@ -7,9 +7,9 @@ import "./booklist.css";
 const Form = () => {
   const dispatch = useDispatch();
   const [values, setValues] = useState({
-    id: uuid(),
     title: "",
     author: "",
+    category: "",
   });
 
   const changeHandler = (e) => {
@@ -22,8 +22,12 @@ const Form = () => {
 
   const clickHandler = (e) => {
     e.preventDefault();
-    setValues({ id: uuid(), title: "", author: "" });
-    dispatch(addBook(values));
+    const book = {
+      item_id: uuid(),
+      ...values,
+    };
+    dispatch(addBook(book));
+    setValues({ title: "", author: "", category: "" });
   };
 
   return (
@@ -44,6 +48,15 @@ const Form = () => {
           placeholder="author"
           onChange={changeHandler}
         />
+        {" "}
+        <select type="category" name="category" placeholder="category" value={values.category} onChange={changeHandler} id="otherField">
+          <option>Select Category</option>
+          <option>sports</option>
+          <option>Fantasy</option>
+          <option>Children&apos;s</option>
+          <option>Literary Fiction</option>
+          <option>Science Fiction</option>
+        </select>
         {" "}
         <button type="submit">Add Book</button>
       </form>

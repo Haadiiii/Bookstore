@@ -4,20 +4,24 @@ import { removeBook } from "../redux/books/books";
 
 const Book = (props) => {
   const dispatch = useDispatch();
-
   const removeBookFromStor = () => {
     dispatch(removeBook(props.id));
   };
   return (
     <div>
-      <div>
-        title:
-        {props.title}
-      </div>
-      <div>
-        author:
+
+      <p>
+        author :
         {props.author}
-      </div>
+      </p>
+      <h4>
+        title :
+        {props.title}
+      </h4>
+      <p>
+        category :
+        {props.category}
+      </p>
       <button type="button" onClick={removeBookFromStor}>
         Remove
       </button>
