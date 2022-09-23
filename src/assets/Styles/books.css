@@ -1,0 +1,179 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 160%;
+  height: 7.625rem;
+  margin-left: -6rem;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  margin-top: -5rem;
+  margin-bottom: 7rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.card div {
+  background-color: #fff;
+}
+
+.card p {
+  background-color: #fff;
+}
+
+.card-add {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(67, 134, 191);
+  cursor: pointer;
+}
+
+.card-add button {
+  border: none;
+  color: rgb(67, 134, 191);
+  cursor: pointer;
+}
+
+.category {
+  width: 100%;
+  height: 1.125rem;
+  margin: 0 4rem 0 0;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(18, 18, 18);
+}
+
+.title {
+  width: 100%;
+  height: 1.813rem;
+  margin: 0.188rem 2.125rem 0 0;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: rgb(18, 18, 18);
+}
+
+.author {
+  width: 100%;
+  height: 1.188rem;
+  margin: 0.25rem 0.875rem 0 0;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(67, 134, 191);
+}
+
+.card-add hr {
+  width: 0.1px;
+  border: solid 1px rgb(232, 232, 232);
+}
+
+.panel-bg {
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.panel-bg hr {
+  border: 10px solid #f3f3f3;
+  border-radius: 60%;
+  border-top: 10px solid #3498db;
+  border-right: 10px solid #3498db;
+  border-bottom: 10px solid #3498db;
+  width: 80px;
+  height: 80px;
+}
+
+.completed {
+  display: flex;
+}
+
+.completed-num {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-right: 5rem;
+}
+
+.completed-num h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: normal;
+  color: rgb(18, 18, 18);
+}
+
+.completed-num p {
+  margin-top: 0.5rem;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(18, 18, 18);
+}
+
+.line-2 {
+  width: 0.125rem;
+  background-color: #e8e8e8;
+  border: solid 50px var(--white);
+  margin-right: 5rem;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.progress p {
+  opacity: 0.5;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(18, 18, 18);
+}
+
+.progress button {
+  padding: 0.538rem 1.288rem 0.6rem 1.575rem;
+  border-radius: 3px;
+  background-color: rgb(2, 144, 255);
+  border: rgb(2, 144, 255);
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

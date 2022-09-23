@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import uuid from "react-uuid";
 import { addBook } from "../redux/books/books";
-import "./booklist.css";
+import "../assets/Styles/form.css";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,7 @@ const Form = () => {
     title: "",
     author: "",
     category: "",
+    button: "Add BOOK",
   });
 
   const changeHandler = (e) => {
@@ -27,29 +28,48 @@ const Form = () => {
       ...values,
     };
     dispatch(addBook(book));
-    setValues({ title: "", author: "", category: "" });
+    setValues({
+      title: "",
+      author: "",
+      category: "",
+      button: "Add BOOK",
+    });
   };
 
   return (
     <div>
-      <form type="submit" onSubmit={clickHandler}>
+      <hr className="line" />
+      <h1 className="new-book">ADD NEW BOOK</h1>
+      <form id="form" type="submit" onSubmit={clickHandler}>
         <input
+          required
           type="title"
           value={values.title}
           name="title"
           placeholder="title"
+          id="input-1"
           onChange={changeHandler}
         />
         {" "}
         <input
+          required
           type="author"
           value={values.author}
           name="author"
           placeholder="author"
+          id="input-2"
           onChange={changeHandler}
         />
         {" "}
-        <select type="category" name="category" placeholder="category" value={values.category} onChange={changeHandler} id="otherField">
+
+        <select
+          type="category"
+          name="category"
+          placeholder="category"
+          value={values.category}
+          onChange={changeHandler}
+          id="otherField"
+        >
           <option>Select Category</option>
           <option>sports</option>
           <option>Fantasy</option>
@@ -58,7 +78,9 @@ const Form = () => {
           <option>Science Fiction</option>
         </select>
         {" "}
-        <button type="submit">Add Book</button>
+        <button className="btn" type="submit">
+          {values.button}
+        </button>
       </form>
     </div>
   );
