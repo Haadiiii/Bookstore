@@ -16,6 +16,7 @@
 .card div {
   background-color: #fff;
 }
+
 .card p {
   background-color: #fff;
 }
@@ -33,6 +34,11 @@
   letter-spacing: normal;
   color: rgb(67, 134, 191);
   cursor: pointer;
+}
+
+.card-add button {
+  border: none;
+  color: rgb(67, 134, 191);
 }
 
 .category {
@@ -99,7 +105,6 @@
 
 .completed {
   display: flex;
-
 }
 
 .completed-num {
@@ -115,7 +120,6 @@
   font-weight: normal;
   line-height: normal;
   color: rgb(18, 18, 18);
-
 }
 
 .completed-num p {
@@ -129,7 +133,6 @@
   line-height: normal;
   letter-spacing: normal;
   color: rgb(18, 18, 18);
-
 }
 
 .line-2 {

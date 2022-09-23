@@ -2,11 +2,11 @@
   margin: 10rem;
 }
 
-.main{
+.main {
   padding: 0 0 10.625rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.2);
   background-color: rgb(250, 250, 250);
-    width: 90%;
+  width: 90%;
   margin: 5rem;
 }

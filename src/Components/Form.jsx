@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import uuid from "react-uuid";
 import { addBook } from "../redux/books/books";
@@ -15,7 +15,7 @@ const Form = () => {
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setValues(( preData) => ({
+    setValues((preData) => ({
       ...preData,
       [name]: value,
     }));
@@ -28,10 +28,10 @@ const Form = () => {
       ...values,
     };
     dispatch(addBook(book));
-    setValues({ title: "", author: "", category: "", button: "Add BOOK",  });
+    setValues({
+      title: "", author: "", category: "", button: "Add BOOK",
+    });
   };
-
- 
 
   return (
     <div>
@@ -43,7 +43,8 @@ const Form = () => {
           placeholder="title"
           id="input-1"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <input
           type="author"
           value={values.author}
@@ -51,7 +52,8 @@ const Form = () => {
           placeholder="author"
           id="input-2"
           onChange={changeHandler}
-        />{" "}
+        />
+        {" "}
         <select
           type="category"
           name="category"
@@ -60,13 +62,14 @@ const Form = () => {
           onChange={changeHandler}
           id="otherField"
         >
-          <option typeof="show">Select Category</option>
+          <option>Select Category</option>
           <option>sports</option>
           <option>Fantasy</option>
           <option>Children&apos;s</option>
           <option>Literary Fiction</option>
           <option>Science Fiction</option>
-        </select>{" "}
+        </select>
+        {" "}
         <button
           className="btn"
           type="submit"
