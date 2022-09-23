@@ -54,6 +54,7 @@ const Form = () => {
           onChange={changeHandler}
         />
         {" "}
+
         <select
           type="category"
           name="category"
