@@ -5,10 +5,11 @@ import Navbar from "./Components/Navbar";
 import Books from "./pages/Books";
 import Categories from "./pages/Categories";
 import store from "./redux/configureStore";
-import "./App.css";
+import "../src/assets/Styles/App.css";
 
 const App = () => (
   <>
+  <div className="main">
     <Navbar />
     <Provider store={store}>
       <Routes>
@@ -16,6 +17,7 @@ const App = () => (
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </Provider>
+    </div>
   </>
 );
 

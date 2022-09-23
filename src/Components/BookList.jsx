@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import uuid from "react-uuid";
 import Book from "./Book";
 import Form from "./Form";
-import "./booklist.css";
-import uuid from "react-uuid";
+import "../assets/Styles/booklist.css";
 import { showBook } from "../redux/books/books";
 
 const Booklist = () => {
   const dispatch = useDispatch();
-  let { bookArray } = useSelector((state) => state.book);
+  const { bookArray } = useSelector((state) => state.book);
   useEffect(() => {
     dispatch(showBook());
   }, []);

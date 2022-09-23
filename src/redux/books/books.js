@@ -4,8 +4,7 @@ const ADD = "books/books/ADD";
 const REMOVE = "books/books/REMOVE";
 const SHOW_BOOK = "books/books/SOW_BOOK";
 
-const url =
-  "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/baNJ1Mz064XyqrmXZeu8/books/";
+const url = "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/baNJ1Mz064XyqrmXZeu8/books/";
 const initialState = {
   bookArray: [],
   msg: {},
@@ -28,7 +27,7 @@ export const showBook = createAsyncThunk(
       payload: books,
     });
     return books;
-  }
+  },
 );
 
 export const addBook = (book) => async (dispatch) => {
@@ -40,9 +39,8 @@ export const addBook = (book) => async (dispatch) => {
     });
     dispatch({
       type: ADD,
-    }),
-      dispatch(showBook());
-    console.log("add", book);
+    });
+    dispatch(showBook());
   } catch (error) {
     console.log("error", error);
   }
@@ -52,12 +50,10 @@ export const removeBook = (id) => (dispatch) => {
   fetch(`${url}${id}`, {
     method: "DELETE",
   })
-    .then(() =>
-      dispatch({
-        type: REMOVE,
-        payload: id,
-      })
-    )
+    .then(() => dispatch({
+      type: REMOVE,
+      payload: id,
+    }))
     .then((data) => {
       console.log("removedata", data);
     });
@@ -77,7 +73,7 @@ const bookReducer = (state = initialState, action) => {
     case REMOVE:
       return {
         bookArray: state.bookArray.filter(
-          (book) => book.item_id !== action.payload
+          (book) => book.item_id !== action.payload,
         ),
       };
     default:
