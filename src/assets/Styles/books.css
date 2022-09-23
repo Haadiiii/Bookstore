@@ -39,6 +39,7 @@
 .card-add button {
   border: none;
   color: rgb(67, 134, 191);
+  cursor: pointer;
 }
 
 .category {

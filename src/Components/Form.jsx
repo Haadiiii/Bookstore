@@ -29,14 +29,20 @@ const Form = () => {
     };
     dispatch(addBook(book));
     setValues({
-      title: "", author: "", category: "", button: "Add BOOK",
+      title: "",
+      author: "",
+      category: "",
+      button: "Add BOOK",
     });
   };
 
   return (
     <div>
+      <hr className="line" />
+      <h1 className="new-book">ADD NEW BOOK</h1>
       <form id="form" type="submit" onSubmit={clickHandler}>
         <input
+          required
           type="title"
           value={values.title}
           name="title"
@@ -46,6 +52,7 @@ const Form = () => {
         />
         {" "}
         <input
+          required
           type="author"
           value={values.author}
           name="author"
@@ -70,10 +77,7 @@ const Form = () => {
           <option>Science Fiction</option>
         </select>
         {" "}
-        <button
-          className="btn"
-          type="submit"
-        >
+        <button className="btn" type="submit">
           {values.button}
         </button>
       </form>

@@ -49,3 +49,14 @@ a {
   text-decoration: none;
   background-color: #fff;
 }
+
+.image {
+  position: absolute;
+  display: flex;
+  margin-right: -70rem;
+  height: 1rem;
+  border-radius: 30px;
+  padding: 20px;
+  border: 0.5px solid #f0e9e9;
+  cursor: pointer;
+}

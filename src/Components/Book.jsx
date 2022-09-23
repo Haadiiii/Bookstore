@@ -50,7 +50,7 @@ const Book = (props) => {
         </div>
         <hr className="line-2" />
         <div className="progress">
-          <p>Current Chapter</p>
+          <p>CURRENT CHAPTER</p>
           <button type="button" onClick={handleClick}>update Progress</button>
         </div>
       </div>
