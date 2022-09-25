@@ -5,6 +5,8 @@ import { addBook } from "../redux/books/books";
 import "../assets/Styles/form.css";
 
 const Form = () => {
+  const [msg, setMsg] = useState("");
+
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     title: "",
@@ -32,8 +34,11 @@ const Form = () => {
       title: "",
       author: "",
       category: "",
-      button: "Add BOOK",
+      button: "Adding...",
     });
+    setTimeout(() => setValues({ button: "Add BOOK" }), 1500);
+    setMsg("Book Added Successfully");
+    setTimeout(() => setMsg(""), 3000);
   };
 
   return (
@@ -61,7 +66,6 @@ const Form = () => {
           onChange={changeHandler}
         />
         {" "}
-
         <select
           type="category"
           name="category"
@@ -82,6 +86,7 @@ const Form = () => {
           {values.button}
         </button>
       </form>
+      <p className="added-msg">{msg}</p>
     </div>
   );
 };

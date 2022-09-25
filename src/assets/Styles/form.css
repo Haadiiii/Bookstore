@@ -4,11 +4,10 @@
   background-color: #fafafa;
   display: flex;
   align-items: center;
-  margin-left: -9rem;
+  margin-left: -7rem;
 }
 
 #input-1 {
-  width: 11.5rem;
   height: 2.813rem;
   margin: 1.188rem 1.125rem 0 0;
   padding: 0 10.688rem 0.813rem 1.063rem;
@@ -18,7 +17,6 @@
 }
 
 #input-2 {
-  width: 11.5rem;
   height: 2.813rem;
   margin: 1.188rem 1.125rem 0 0;
   padding: 0 10.688rem 0.813rem 1.063rem;
@@ -28,7 +26,6 @@
 }
 
 #otherField {
-  /* width: 6.5rem; */
   height: 2.813rem;
   margin: 1.188rem 1.125rem 0 0;
   padding: 0 10.688rem 0.813rem 1.063rem;
@@ -44,11 +41,8 @@
   border-radius: 3px;
   background-color: rgb(2, 144, 255);
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 0.813rem;
+  font-size: 1.113rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -58,7 +52,7 @@
 }
 
 .line {
-  width: 180%;
+  width: 120%;
   margin-left: -6rem;
   height: 2px;
   background-color: #e8e8e8;
@@ -79,4 +73,28 @@
   line-height: normal;
   letter-spacing: normal;
   color: rgb(18, 18, 18);
+}
+
+.added-msg {
+  position: absolute;
+  margin-top: 3rem;
+  margin-left: 55rem;
+  font-size: 20px;
+  color: rgb(2, 144, 255);
+  font-family: cursive;
+  padding: 0 20px 0 20px;
+  font-weight: 300;
+  transition: 1s;
+}
+
+@media (max-width: 768px) {
+  #form {
+    position: absolute;
+    margin-top: 5rem;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -9rem;
+  }
 }
