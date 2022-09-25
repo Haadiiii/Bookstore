@@ -1,7 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # BookStore
 
-> In this website you will add books and also watch the lists of books.
+> It is a single page website with two connected pages books and category in book page you will add books and Remove book through connect API and also watch the lists and progress of books.
+
+![image](https://user-images.githubusercontent.com/104095543/192159955-9651de26-da50-456a-afc6-7183df9051e4.png)
+
 
 ## Built With
 
